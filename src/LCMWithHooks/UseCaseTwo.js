@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react"
-
-function UseCaseOne(props){
+function UseCaseTwo(props){
     const [count,setCount]=useState(0)
     useEffect(
         ()=>{
             console.log("inside useeffect")
-        },[]
+        }
     )
     return(
         <>
@@ -16,4 +15,4 @@ function UseCaseOne(props){
         
     )
 }
-export default UseCaseOne
+export default UseCaseTwo
