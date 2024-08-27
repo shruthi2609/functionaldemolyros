@@ -1,9 +1,15 @@
 import useHook from "../CustomHooks/useHook";
+import useTime from "../CustomHooks/useTime";
 
 function HookConsumer(){
-    const data=useHook()
+    // const data=useHook()
+    const time=useTime()
     return(
-        <h1>{data}</h1>
+        <>
+        {console.log(time)}
+        
+        </>
+       
     )
 }
 export default HookConsumer

@@ -11,11 +11,12 @@ import useHook from "./CustomHooks/useHook";
 import SignInComponent from "./ConsumerComponents/SignInComponent";
 import JsonComponent from "./ConsumerComponents/JsonComponent";
 import ArrayConsumer from "./ConsumerComponents/ArrayConsumer";
+import PageRoot from "./PageRoot";
 
 function App() {
   
   return(
-<ArrayConsumer></ArrayConsumer>
+<PageRoot></PageRoot>
   )
 
 }
