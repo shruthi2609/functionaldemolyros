@@ -9,10 +9,13 @@ import ContactManagerFlag from "./ContactManager/ContactManagerFlag";
 import HookConsumer from "./ConsumerComponents/HookConsumer";
 import useHook from "./CustomHooks/useHook";
 import SignInComponent from "./ConsumerComponents/SignInComponent";
+import JsonComponent from "./ConsumerComponents/JsonComponent";
+import ArrayConsumer from "./ConsumerComponents/ArrayConsumer";
+
 function App() {
   
   return(
-<SignInComponent></SignInComponent>
+<ArrayConsumer></ArrayConsumer>
   )
 
 }
