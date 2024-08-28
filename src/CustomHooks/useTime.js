@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState,useRef } from "react"
 
 function useTime(){
     const getTime=()=>{
@@ -9,12 +9,29 @@ function useTime(){
       return `${hours}:${minutes}:${seconds}`
     }
     const [currentTime,setTime]=useState(getTime())
+    const [isActive,setActive]=useState(true)
+    const stopClock=()=>{
+      setActive(false)
+    }
+    let timeoutID
+    
     useEffect(()=>{
-        const intervalId=setInterval(()=>setTime(getTime()),2000)
-        return ()=>clearInterval(intervalId)
-    },[])
-   
-    return currentTime
+      if(isActive){
+        timeoutID=setInterval(()=>setTime(getTime()),2000)
+        console.log(timeoutID)
+      }
+      else{
+        clearInterval(timeoutID)
+      }
+        
+        return ()=>{
+         
+          console.log("unmount hit")
+          console.log(timeoutID)
+          clearInterval(timeoutID)
+        }
+    },[currentTime,setTime,isActive])
+    return {currentTime,stopClock}
 
 }
 export default useTime

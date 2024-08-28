@@ -12,11 +12,17 @@ import SignInComponent from "./ConsumerComponents/SignInComponent";
 import JsonComponent from "./ConsumerComponents/JsonComponent";
 import ArrayConsumer from "./ConsumerComponents/ArrayConsumer";
 import PageRoot from "./PageRoot";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   
   return(
-<PageRoot></PageRoot>
+<BrowserRouter>
+<Routes>
+<Route path='/' element={<HookConsumer></HookConsumer>}></Route>
+<Route path="/contact" element={<ContactManager></ContactManager>}></Route>
+</Routes>
+</BrowserRouter>
   )
 
 }

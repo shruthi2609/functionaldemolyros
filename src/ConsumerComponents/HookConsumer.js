@@ -3,10 +3,12 @@ import useTime from "../CustomHooks/useTime";
 
 function HookConsumer(){
     // const data=useHook()
-    const time=useTime()
+    const {currentTime,stopClock}=useTime()
     return(
         <>
-        {console.log(time)}
+        
+        <h1>{currentTime}</h1>
+        <button onClick={()=>stopClock()}>stop</button>
         
         </>
        
