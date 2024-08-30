@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 
 import TodoTrue from "./TodoTrue"
 import TodoFalse from "./TodoFalse"
@@ -93,7 +93,7 @@ function TodoFunctional(){
     return(
         <>
         {/* {console.log(todo)} */}
-        {console.log("parent component")}
+        {console.log("parent component",todo)}
             {
                 
                 <>

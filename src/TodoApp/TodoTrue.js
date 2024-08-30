@@ -1,4 +1,5 @@
 import React from "react"
+
 function TodoTrue(props){
     const {data, fun, del, trash} = props
     return(
