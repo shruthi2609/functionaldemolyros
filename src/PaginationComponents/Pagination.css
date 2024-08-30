@@ -1,0 +1,7 @@
+.hidden{
+    background-color: azure;
+}
+.unhidden{
+    background-color: black;
+    color: wheat;
+}

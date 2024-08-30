@@ -13,16 +13,13 @@ import JsonComponent from "./ConsumerComponents/JsonComponent";
 import ArrayConsumer from "./ConsumerComponents/ArrayConsumer";
 import PageRoot from "./PageRoot";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import TodoFunctional from "./TodoApp/TodoFuntional";
+import ParentComponent from "./Optimization/ParentComponent";
 
 function App() {
   
   return(
-<BrowserRouter>
-<Routes>
-<Route path='/' element={<HookConsumer></HookConsumer>}></Route>
-<Route path="/contact" element={<ContactManager></ContactManager>}></Route>
-</Routes>
-</BrowserRouter>
+<TodoFunctional></TodoFunctional>
   )
 
 }
