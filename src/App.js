@@ -16,11 +16,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import TodoFunctional from "./TodoApp/TodoFuntional";
 import ParentComponent from "./Optimization/ParentComponent";
 import ContextProvider from "./SimpleContext/ContextProvider";
+import AuthProvider from "./AuthContext/AuthProvider";
 
 function App() {
   
   return(
-<ContextProvider></ContextProvider>
+<AuthProvider></AuthProvider>
   )
 
 }
