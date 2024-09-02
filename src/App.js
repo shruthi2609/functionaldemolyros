@@ -15,11 +15,12 @@ import PageRoot from "./PageRoot";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import TodoFunctional from "./TodoApp/TodoFuntional";
 import ParentComponent from "./Optimization/ParentComponent";
+import ContextProvider from "./SimpleContext/ContextProvider";
 
 function App() {
   
   return(
-<TodoFunctional></TodoFunctional>
+<ContextProvider></ContextProvider>
   )
 
 }

@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useEffect } from "react"
 
 function TodoTrue(props){
     const {data, fun, del, trash} = props
+   
     return(
         <>
         <h1>Completed Items</h1>

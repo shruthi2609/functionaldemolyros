@@ -34,20 +34,27 @@ function TodoFunctional(){
         setTodo(newValue)
     }
 
-    const getCompletedItems = () => {
-        const todoTrue = todo.filter(item => item.status === true && item.active === true);
-        return todoTrue
-    }
+    const getCompletedItems = useCallback(()=>{
+        return () => {
+            const todoTrue = todo.filter(item => item.status === true && item.active === true);
+            return todoTrue
+        }
+    },[todo])
 
-    const getPendingItems = ()=> {
-        const todofalse = todo.filter(item => item.status === false && item.active === true);
-        return todofalse
-    }
+    const getPendingItems = useCallback(()=>{
+        return ()=> {
+            const todofalse = todo.filter(item => item.status === false && item.active === true);
+            return todofalse
+        }
+    },[todo])
 
-    const getTrashItems = () => {
-        const todoTrash = todo.filter(item => item.active === false)
-        return todoTrash
-    }
+    const getTrashItems = useCallback(()=>{
+        return () => {
+            const todoTrash = todo.filter(item => item.active === false)
+            return todoTrash
+        }
+    },[todo])
+  
     
     const changeFunction = (e,todoId) =>{
         e.preventDefault()
