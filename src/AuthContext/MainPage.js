@@ -1,13 +1,16 @@
 import { useContext } from "react"
-import AuthContext from "./AuthContext"
+
 import SignInPage from "./SignInPage"
+import React from "react"
+import { AuthContextValue } from "./AuthContext"
 function MainPage(){
-   const {isLogged,changeFun}= useContext(AuthContext)
+   const isLogged=useContext(AuthContextValue)
     return(
         <>
+        {console.log("main page")}
         {isLogged? <h1>Main Page</h1>:<h1>Please signin to continue</h1>}
        
         </>
     )
 }
-export default MainPage
+export default React.memo(MainPage)
