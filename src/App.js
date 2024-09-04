@@ -22,6 +22,7 @@ import AuthContext from "./AuthContext/AuthContext";
 import LoginComponent from "./ContextRoutes/LoginComponent";
 import DashBoardComponent from "./ContextRoutes/DashBoard";
 import ViewProducts from "./ContextRoutes/ViewProducts";
+import ContactProvider from "./ContactContext/ContactProvider";
 function App() {
   const [globalUsername,setUsername]=useState("user")
   return(
@@ -36,7 +37,7 @@ function App() {
 </Routes>
 </AuthContext.Provider>
 </BrowserRouter> */}
-<AuthProvider></AuthProvider>
+<ContactProvider></ContactProvider>
 </>
 
   )
