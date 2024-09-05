@@ -20,21 +20,24 @@ import AuthProvider from "./AuthContext/AuthProvider";
 import {BrowserRouter,Link,NavLink,Route,Routes} from 'react-router-dom'
 import AuthContext from "./AuthContext/AuthContext";
 import LoginComponent from "./ContextRoutes/LoginComponent";
-import DashBoardComponent from "./ContextRoutes/DashBoard";
+import DashBoardComponent from "./ReduxToolkit Configs/Components/DashBoardComponent";
 import ViewProducts from "./ContextRoutes/ViewProducts";
 import ContactProvider from "./ContactContext/ContactProvider";
 import countReducer from "./reducers/countReducer";
 import { Provider } from "react-redux";
-import {createStore} from "redux"
-import CounterConnnector from "./reduxeg/CounterConnnector";
-const store=createStore(countReducer)
+import { configureStore } from "@reduxjs/toolkit";
+import loginReducer from "./ReduxToolkit Configs/reducers/loginReducer";
+const store=configureStore(
+  {
+    reducer:loginReducer
+  }
+)
 function App() {
  return(
-  <>
   <Provider store={store}>
-<CounterConnnector></CounterConnnector>
+<DashBoardComponent></DashBoardComponent>
   </Provider>
-  </>
+  
  )
   
 

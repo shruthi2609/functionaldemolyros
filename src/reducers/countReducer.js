@@ -5,7 +5,37 @@ switch(action.type){
     case "DEC":
         return count-1
     default:
-        console.log("error")
+        {
+            console.log("invalid case")
+            return count
+        }
+       
 }
 }
 export default countReducer
+/**
+ * function loggedReducer(isLogged=false,action){
+ * case "LOGIN":
+ * return true
+ * case "LOGOUT":
+ * return false
+ * default:
+ * return false
+ * }
+ * const store=createStore(loggedReducer)
+ * <Provider store={store}>
+ * <LoginComponentConnector>
+ *
+ * </Provider>
+ */
+/**
+ * function LoginComponentConnector(){
+ * mapStateProps()
+ * 
+ * mapDisptachToProps()
+ * 
+ * 
+ * connect()(LoginComponent)
+ * }
+ */
+

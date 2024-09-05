@@ -2,11 +2,11 @@ function CounterComponent(props){
     return(
         <>
         {console.log(props)}
-        <button onClick={(e)=>props.plus}>
+        <button onClick={(e)=>props.plus()}>
             +
         </button>
         <p>{props.count}</p>
-        <button onClick={(e)=>props.minus}>
+        <button onClick={(e)=>props.minus()}>
             -
         </button>
         </>
