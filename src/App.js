@@ -19,7 +19,7 @@ import ContextProvider from "./SimpleContext/ContextProvider";
 import AuthProvider from "./AuthContext/AuthProvider";
 import {BrowserRouter,Link,NavLink,Route,Routes} from 'react-router-dom'
 import AuthContext from "./AuthContext/AuthContext";
-import LoginComponent from "./ContextRoutes/LoginComponent";
+import LoginComponent from "./ReduxToolkit Configs/Components/LoginComponent";
 import DashBoardComponent from "./ReduxToolkit Configs/Components/DashBoardComponent";
 import ViewProducts from "./ContextRoutes/ViewProducts";
 import ContactProvider from "./ContactContext/ContactProvider";
@@ -34,9 +34,12 @@ const store=configureStore(
 )
 function App() {
  return(
+  <>
   <Provider store={store}>
+    <LoginComponent></LoginComponent>
 <DashBoardComponent></DashBoardComponent>
   </Provider>
+  </>
   
  )
   

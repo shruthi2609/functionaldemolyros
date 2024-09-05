@@ -10,9 +10,12 @@ const userSlice=createSlice({
     },
     reducers:{
         login:(state,action)=>{
+            console.log(action)
+            state.loginInfo=action.payload
             state.isLogged=true
         },
-        logout:(state,action)=>{
+        logout:(state)=>{
+            state.loginInfo=initalValue
             state.isLogged=false
         }
     }

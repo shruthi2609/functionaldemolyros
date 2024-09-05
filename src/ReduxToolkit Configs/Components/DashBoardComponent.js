@@ -7,7 +7,7 @@ export default function DashBoardComponent(){
 return(
     <>
     {console.log(result)}
-    <h1>Subcriber One</h1>
+    <h1>DashBoardComponent</h1>
     {
         result.isLogged?<h1>{result.loginInfo.email}</h1>:<h1>Please signin</h1>
     }
