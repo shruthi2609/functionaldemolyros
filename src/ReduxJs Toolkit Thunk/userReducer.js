@@ -5,7 +5,7 @@ const initalValue={
     loading:true
 }
 
-export const fetchUser=createAsyncThunk('/user/fetchUser',async ()=>{
+export const fetchUser=()=>createAsyncThunk('/user/fetchUser',async ()=>{
 try{
     const result=await axios.get("https://jsonplaceholder.typicode.com/users")
     return result.data
@@ -14,6 +14,7 @@ catch(err){
     return "error in fetching"
 }   
 })
+
 const userSlice=createSlice({
     name:"user",
     initialState:{
@@ -30,6 +31,10 @@ const userSlice=createSlice({
     extraReducers:(builder)=>{
         builder.addCase(fetchUser.pending,(state,action)=>{
             console.log("pending")
+        }).addCase(fetchUser.fulfilled,(state,action)=>{
+            console.log("fullfilled")
+        }).addCase(fetchUser.rejected,(state)=>{
+            console.log("rejected")
         })
     }
     

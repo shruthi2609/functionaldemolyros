@@ -6,8 +6,9 @@ function ViewUser(){
         return state.users
     })
     const dispatch=useDispatch()
-    useEffect(()=>{
+    useEffect( ()=>{
         dispatch(fetchUser())
+
     },[dispatch])
     return(
         <>
