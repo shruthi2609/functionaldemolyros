@@ -2,12 +2,13 @@
 import { Provider } from "react-redux";
 
 import store from "./ReduxJs Middleware Config/store";
-import User from "./ReduxJs Middleware Config/components/UserConnector"
+
+import ViewUser from "./ReduxJs Toolkit Thunk/Components/ViewUser";
 function App() {
  return(
   <>
   <Provider store={store}>
-   <User></User>
+  <ViewUser></ViewUser>
   </Provider>
   </>
   
