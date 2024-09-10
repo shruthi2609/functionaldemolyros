@@ -27,17 +27,10 @@ const userSlice=createSlice({
             state.value.userData=state.value.userData.filter((item)=>item.id!==action.payload.id)
         }
     },
-    extraReducers:
-    {
-        [fetchUser.pending]:(state,action)=>{
+    extraReducers:(builder)=>{
+        builder.addCase(fetchUser.pending,(state,action)=>{
             console.log("pending")
-        },
-        [fetchUser.fulfilled]:(state,action)=>{
-            state.value.userData=[...state.value.userData,action.payload]
-        },
-        [fetchUser.rejected]:(state,action)=>{
-            console.log("rejected")
-        }
+        })
     }
     
 })
